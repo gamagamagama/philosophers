@@ -195,5 +195,4 @@ void						eating_w(t_philo *philo);
 char						*usage(void);
 int							check_time(t_prepars *prepars);
 
-
 #endif
