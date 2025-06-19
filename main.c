@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 15:35:25 by mgavorni          #+#    #+#             */
-/*   Updated: 2025/06/19 16:26:58 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 17:08:15 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,19 @@ char	*usage(void)
 		"number_of_times_each_philosopher_must_eat\n" RESET);
 }
 
+int	check_time(t_prepars *prepars)
+{
+	long	i;
+	int		flag;
+
+	i = 60L;
+	flag = 0;
+	if (prepars->ttd < i || prepars->tte < i || prepars->tts < i)
+		flag = error_handler("Time is out of range min is 60ms",
+				-1, prepars);
+	return (flag);
+}
+
 int	main(int ac, char **av)
 {
 	t_prepars	*prepars;
@@ -36,7 +49,7 @@ int	main(int ac, char **av)
 	{
 		malloc_struct_preps(&prepars);
 		prepare_it(&prepars, av);
-		if (!prepars)
+		if (!prepars || check_time(prepars))
 			error_handler("Failed to prepare structures", -1, prepars);
 		malloc_pandf(&prepars, &philo, &forks);
 		simulation(prepars);
@@ -47,4 +60,5 @@ int	main(int ac, char **av)
 	}
 	if (prepars)
 		free_sources(prepars);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 15:33:30 by mgavorni          #+#    #+#             */
-/*   Updated: 2025/06/19 16:36:43 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:57:26 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,5 +193,7 @@ void						eating_w(t_philo *philo);
 
 //------------------------MAIN.c
 char						*usage(void);
+int							check_time(t_prepars *prepars);
+
 
 #endif
