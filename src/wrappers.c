@@ -6,12 +6,11 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:28:14 by mgavornik         #+#    #+#             */
-/*   Updated: 2025/06/19 16:24:05 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:35:57 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
 
 void	do_meal_t(void *arg)
 {
@@ -74,11 +73,3 @@ void	eating_w(t_philo *philo)
 	if (get_now(philo->preps->time_d) > philo->preps->tte)
 		philo->full_flag = 1;
 }
-
-// mutex_codes(&philo->preps->print_mutex, LOCK);
-// print_status(EATING, philo);
-// mutex_codes(&philo->preps->print_mutex, UNLOCK);
-// get_now(philo->preps->time_d);
-// set_long(&philo->preps->prep_mutex, &philo->meal_time,
-//	get_now(philo->preps->time_d));
-// printf(YEL"now : %ld\n"RESET, philo->meal_time);

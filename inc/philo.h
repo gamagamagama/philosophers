@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 15:33:30 by mgavorni          #+#    #+#             */
-/*   Updated: 2025/06/19 16:28:06 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:36:43 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ typedef enum e_mutx_code
 
 typedef enum e_thread_code
 {
-
 	CREATE,
 	JOIN,
 	DETACH,

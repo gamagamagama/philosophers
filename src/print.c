@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 14:13:35 by mgavorni          #+#    #+#             */
-/*   Updated: 2025/06/19 16:23:08 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:35:34 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	print_status(t_status status, t_philo *philo)
 	long	elapsed;
 
 	elapsed = get_now(philo->preps->time_d);
-
 	if ((status == LEFT_FORK) && !flag_end_simul(philo->preps))
 	{
 		elapsed = get_now(philo->preps->time_d);

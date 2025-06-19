@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:35:20 by mgavornik         #+#    #+#             */
-/*   Updated: 2025/06/19 16:09:35 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:34:30 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	flag_get_tf(t_mutex *mutex, int *flag)
 	mutex_codes(mutex, UNLOCK);
 	return (value);
 }
-
 
 int	flag_end_simul(t_prepars *preps)
 {

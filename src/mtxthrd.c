@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 15:24:57 by mgavorni          #+#    #+#             */
-/*   Updated: 2025/05/19 15:31:54 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 16:34:51 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void	wait_for_threads(t_prepars *preps)
 {
 	while (!flag_get_tf(&preps->prep_mutex, &preps->threads_ready))
 		;
-
 }
 
 void	do_mutex(t_mutex *mutex, void (*op)(void *), void *arg)
