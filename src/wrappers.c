@@ -6,7 +6,7 @@
 /*   By: mgavorni <mgavorni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 14:28:14 by mgavornik         #+#    #+#             */
-/*   Updated: 2025/06/19 16:35:57 by mgavorni         ###   ########.fr       */
+/*   Updated: 2025/06/19 20:04:51 by mgavorni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	break_meal_wr(void *arg)
 	if (philo->done_meals)
 	{
 		do_mutex(&philo->preps->prep_mutex, do_meal_t, philo);
-		my_usleep(100, philo->preps->time_d, &philo->preps->dead_flag);
+		my_usleep(0, philo->preps->time_d, &philo->preps->dead_flag);
 		return (1);
 	}
 	return (0);
